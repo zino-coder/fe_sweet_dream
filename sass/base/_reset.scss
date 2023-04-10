@@ -8,7 +8,7 @@ body {
 a {
     color: $main-content-color;
     &:hover {
-        color: $main-color !important;
+        color: $main-color;
         text-decoration: none;
     }
 }

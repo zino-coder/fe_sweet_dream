@@ -56,3 +56,21 @@
         opacity: .6;
     }
 }
+
+.nav-pink {
+    .nav-link {
+        &.active {
+            color: #fff;
+            background-color: $main-color;
+        }
+    
+        border: 1px solid $main-color;
+        margin: 0 8px;
+        line-height: 24px;
+        font-size: $font-size-title-small;
+        font-weight: 700;
+        color: $main-color;
+        padding: 11px 26px;
+        border-radius: 24px;
+    }
+}

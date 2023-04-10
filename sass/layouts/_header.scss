@@ -6,13 +6,27 @@
         border-bottom: 1px solid $main-color;
         &-left {
            .header-info {
-            margin-right: 32px;
+            transition: all .5s;
+                margin-right: 32px;
                 a {
                     margin-left: 8px;
                     font-size: $font-size-header;
                     line-height: 18px;
                     font-weight: 600;
                     color: $color-grey;
+                    transition: all .5s;
+                }
+                svg {
+                    transition: all .5s;
+                }
+                &:hover {
+                    transform: scale(1.1);
+                    a {
+                        color: $main-color;
+                    }
+                    svg {
+                        transform: rotate(720deg);
+                    }
                 }
            }
         }
@@ -27,8 +41,14 @@
                     border-radius: 32px;
                     margin-right: 13px;
                     animation-name: pulse; /* Tên của keyframe animation */
-                    animation-duration: 1s; /* Thời gian thực hiện animtion */
+                    animation-duration: 0.3s; /* Thời gian thực hiện animtion */
                     animation-iteration-count: infinite; /* Lặp vô hạn */
+                    &:hover {
+                        animation-play-state: paused;
+                    }
+                    &:active {
+                        animation-play-state: paused;
+                    }
                 }
             }
             .shopping-cart {

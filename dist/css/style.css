@@ -57,7 +57,7 @@ a {
   color: #5A5A5A;
 }
 a:hover {
-  color: #FE6A84 !important;
+  color: #FE6A84;
   text-decoration: none;
 }
 
@@ -131,6 +131,21 @@ svg {
   opacity: 0.6;
 }
 
+.nav-pink .nav-link {
+  border: 1px solid #FE6A84;
+  margin: 0 8px;
+  line-height: 24px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #FE6A84;
+  padding: 11px 26px;
+  border-radius: 24px;
+}
+.nav-pink .nav-link.active {
+  color: #fff;
+  background-color: #FE6A84;
+}
+
 .header-top {
   height: 40px;
   display: flex;
@@ -138,6 +153,7 @@ svg {
   border-bottom: 1px solid #FE6A84;
 }
 .header-top-left .header-info {
+  transition: all 0.5s;
   margin-right: 32px;
 }
 .header-top-left .header-info a {
@@ -146,6 +162,19 @@ svg {
   line-height: 18px;
   font-weight: 600;
   color: #858484;
+  transition: all 0.5s;
+}
+.header-top-left .header-info svg {
+  transition: all 0.5s;
+}
+.header-top-left .header-info:hover {
+  transform: scale(1.1);
+}
+.header-top-left .header-info:hover a {
+  color: #FE6A84;
+}
+.header-top-left .header-info:hover svg {
+  transform: rotate(720deg);
 }
 .header-top-right .order-now .orderNow {
   padding: 7px 20px;
@@ -156,8 +185,14 @@ svg {
   border-radius: 32px;
   margin-right: 13px;
   animation-name: pulse; /* Tên của keyframe animation */
-  animation-duration: 1s; /* Thời gian thực hiện animtion */
+  animation-duration: 0.3s; /* Thời gian thực hiện animtion */
   animation-iteration-count: infinite; /* Lặp vô hạn */
+}
+.header-top-right .order-now .orderNow:hover {
+  animation-play-state: paused;
+}
+.header-top-right .order-now .orderNow:active {
+  animation-play-state: paused;
 }
 .header-top-right .shopping-cart {
   position: relative;
@@ -235,6 +270,7 @@ svg {
   border-bottom: 1px solid #FE6A84;
 }
 .header-top-left .header-info {
+  transition: all 0.5s;
   margin-right: 32px;
 }
 .header-top-left .header-info a {
@@ -243,6 +279,19 @@ svg {
   line-height: 18px;
   font-weight: 600;
   color: #858484;
+  transition: all 0.5s;
+}
+.header-top-left .header-info svg {
+  transition: all 0.5s;
+}
+.header-top-left .header-info:hover {
+  transform: scale(1.1);
+}
+.header-top-left .header-info:hover a {
+  color: #FE6A84;
+}
+.header-top-left .header-info:hover svg {
+  transform: rotate(720deg);
 }
 .header-top-right .order-now .orderNow {
   padding: 7px 20px;
@@ -253,8 +302,14 @@ svg {
   border-radius: 32px;
   margin-right: 13px;
   animation-name: pulse; /* Tên của keyframe animation */
-  animation-duration: 1s; /* Thời gian thực hiện animtion */
+  animation-duration: 0.3s; /* Thời gian thực hiện animtion */
   animation-iteration-count: infinite; /* Lặp vô hạn */
+}
+.header-top-right .order-now .orderNow:hover {
+  animation-play-state: paused;
+}
+.header-top-right .order-now .orderNow:active {
+  animation-play-state: paused;
 }
 .header-top-right .shopping-cart {
   position: relative;
@@ -409,6 +464,88 @@ svg {
   text-align: center;
   opacity: 1;
   z-index: 888;
+}
+
+.trending-proudct {
+  padding-top: 30px;
+}
+.trending-proudct .card {
+  transition: all 0.3s;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  border: 1px solid #FE6A84;
+}
+.trending-proudct .card .product-img {
+  position: relative;
+}
+.trending-proudct .card .product-img .image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: all 0.4s;
+}
+.trending-proudct .card:hover {
+  box-shadow: 8px 8px 24px rgba(254, 106, 132, 0.5);
+  border-color: transparent;
+}
+.trending-proudct .card:hover .card-title {
+  color: #FE6A84;
+}
+.trending-proudct .card:hover .product-img .image-overlay {
+  opacity: 1;
+}
+.trending-proudct .card-title {
+  line-height: 28px;
+}
+.trending-proudct .card-text {
+  color: #858484;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 500;
+  margin-bottom: 11px;
+}
+.trending-proudct .card-text .sale-price {
+  font-size: 20px;
+  color: #F35D78;
+  line-height: 30px;
+  margin-right: 8px;
+  font-weight: 700;
+}
+.trending-proudct .addtocart {
+  margin: 0;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  border-radius: 16px;
+  position: relative;
+  color: transparent;
+}
+.trending-proudct .addtocart::before {
+  color: #fff;
+  content: "Thêm vào giỏ hàng";
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 6px 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #FE6A84;
+  border-radius: 16px;
+  transition: all 0.2s;
+  background-color: #FE6A84;
+}
+.trending-proudct .addtocart:hover::before {
+  transform: translateY(-3px);
+}
+.trending-proudct .addtocart:active::before {
+  transform: rotateY(0);
 }
 
 /*# sourceMappingURL=style.css.map */
