@@ -31,26 +31,6 @@
            }
         }
         &-right {
-            .order-now {
-                .orderNow {
-                    padding: 7px 20px;
-                    font-size: $font-size-header;
-                    font-weight: 600;
-                    line-height: 18px;
-                    border: 0;
-                    border-radius: 32px;
-                    margin-right: 13px;
-                    animation-name: pulse; /* Tên của keyframe animation */
-                    animation-duration: 0.3s; /* Thời gian thực hiện animtion */
-                    animation-iteration-count: infinite; /* Lặp vô hạn */
-                    &:hover {
-                        animation-play-state: paused;
-                    }
-                    &:active {
-                        animation-play-state: paused;
-                    }
-                }
-            }
             .shopping-cart {
                 position: relative;
                 padding: 0;

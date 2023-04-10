@@ -74,3 +74,62 @@
         border-radius: 24px;
     }
 }
+
+h2.web-title {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 700;
+    color: $main-color;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.order-now {
+    .orderNow {
+        padding: 7px 20px;
+        font-size: $font-size-header;
+        font-weight: 600;
+        line-height: 18px;
+        border: 0;
+        border-radius: 32px;
+        margin-right: 13px;
+        animation-name: pulse; /* Tên của keyframe animation */
+        animation-duration: 0.3s; /* Thời gian thực hiện animtion */
+        animation-iteration-count: infinite; /* Lặp vô hạn */
+        &:hover {
+            animation-play-state: paused;
+        }
+        &:active {
+            animation-play-state: paused;
+        }
+        &-lg {
+            font-size: $font-size-title-small;
+            line-height: 24px;
+            padding: 12px 28px;
+        }
+    }
+}
+
+.hover-animation {
+    .card {
+        overflow: hidden;
+        border-radius: 30px;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        transition: all .5s;
+    }
+    &:hover {
+        img {
+            transform: scale(1.2);
+        };
+    }
+}
+
+.limit-4line {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
