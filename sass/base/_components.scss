@@ -1,0 +1,58 @@
+.btn-pink {
+    @include btn-pink;
+    &:hover {
+        @include btn-pink-hover
+    }
+}
+
+.btn-outline-pink {
+    @include btn-ouline-pink;
+    &:hover {
+        @include btn-pink;
+    }
+}
+
+.offcanvas {
+    position: fixed;
+    min-width: 355px;
+    height: 100%;
+    padding: 18px 28px 33px;
+    background: #fff;
+    z-index: 999;
+    right: 0;
+    top: 0;
+    transition: .5s;
+    transform: translateX(100%);
+    &.active {
+        transform: translateX(0);
+    }
+    &-header {
+        position: relative;
+    }
+    .btn-close {
+        padding: 0;
+        border: 0;
+        background: transparent;
+        position: absolute;
+        top: 0;
+        right: 0;
+        vertical-align: middle;
+    }
+}
+
+.offcanvas-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+    cursor: crosshair;
+    background: #222222;
+    top: 0;
+    &.active {
+        visibility: visible;
+        opacity: .6;
+    }
+}

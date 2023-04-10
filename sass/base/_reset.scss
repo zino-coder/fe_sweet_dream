@@ -1,0 +1,17 @@
+body {
+    font-family: $font-family-main;
+    font-size: 16px;
+    font-weight: 400;
+    color: $main-content-color;
+}
+
+a {
+    color: $main-content-color;
+    &:hover {
+        color: $main-color !important;
+        text-decoration: none;
+    }
+}
+svg {
+    fill: $main-color;
+}

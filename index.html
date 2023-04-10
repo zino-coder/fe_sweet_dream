@@ -5,8 +5,184 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sweet Dream</title>
+    <!-- Bootstrap 4.6 -->
+    <link rel="stylesheet" href="libs/bootstrap-4.6.2-dist/css/bootstrap.min.css">
+    <!-- Slick -->
+    <link rel="stylesheet" href="libs/slick/slick.css">
+    <!-- Slick Theme -->
+    <link rel="stylesheet" href="libs/slick/slick-theme.css">
+    <!-- My Css -->
+    <link rel="stylesheet" href="dist/css/style.css">
 </head>
 <body>
-    
+    <div class="offcanvas-overlay"></div>
+    <!-- Header -->
+    <header class="header">
+        <!-- Header Top -->
+        <div class="header-top">
+            <div class="container-xl">
+                <div class="d-flex justify-content-between">
+                    <div class="header-top-left d-flex align-items-center">
+                        <div class="header-info">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.208 11.1361C13.1709 10.3094 12.1184 9.80864 11.094 10.6341L10.4824 11.133C10.0348 11.4951 9.20274 13.1872 5.98562 9.73808C2.76917 6.29332 4.68323 5.75697 5.13143 5.39794L5.74645 4.89843C6.76545 4.07112 6.38089 3.02963 5.64595 1.95755L5.20244 1.30819C4.46415 0.238608 3.66021 -0.463831 2.63853 0.362237L2.08648 0.811798C1.63494 1.11837 0.372741 2.1149 0.0665717 4.00805C-0.301903 6.27958 0.860468 8.88079 3.52354 11.7349C6.18326 14.5902 8.78737 16.0244 11.2541 15.9995C13.3042 15.9789 14.5423 14.9536 14.9295 14.5809L15.4836 14.1307C16.5026 13.3052 15.8695 12.4648 14.8317 11.6362L14.208 11.1361Z" fill="#FE6A84"/>
+                            </svg>     
+                            <a href="tel:0352 988 201">0352 988 201</a>                           
+                        </div>
+                        <div class="header-info">
+                            <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.33716 7.80279C8.93909 8.06817 8.47672 8.20845 8 8.20845C7.52331 8.20845 7.06094 8.06817 6.66287 7.80279L0.106531 3.43176C0.0701562 3.40751 0.0347187 3.38223 0 3.35623V10.5186C0 11.3398 0.666406 11.9915 1.47291 11.9915H14.5271C15.3482 11.9915 16 11.3251 16 10.5186V3.3562C15.9652 3.38226 15.9297 3.40761 15.8932 3.43189L9.33716 7.80279Z" fill="#FE6A84"/>
+                                <path d="M0.626562 2.6518L7.18291 7.02286C7.43109 7.18833 7.71553 7.27105 7.99997 7.27105C8.28444 7.27105 8.56891 7.1883 8.81709 7.02286L15.3734 2.6518C15.7658 2.39039 16 1.95289 16 1.48071C16 0.668801 15.3395 0.00830078 14.5276 0.00830078H1.47241C0.660531 0.00833203 0 0.668832 0 1.48149C0 1.95289 0.23425 2.39039 0.626562 2.6518V2.6518Z" fill="#FE6A84"/>
+                            </svg>
+                            <a href="mailto:sweetdreams@gmail.com">sweetdreams@gmail.com</a>                      
+                        </div>
+                        <div class="header-info">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 16C12.4171 16 16 12.4171 16 8C16 3.58285 12.4171 0 8 0C3.58285 0 0 3.58285 0 8C0 12.4171 3.58285 16 8 16ZM7.42855 3.42858C7.42855 3.11428 7.6857 2.85713 8 2.85713C8.3143 2.85713 8.57144 3.11428 8.57144 3.42858V7.72572L11.2143 9.84001C11.46 10.0372 11.5 10.3971 11.3029 10.6429C11.1914 10.7829 11.0257 10.8571 10.8571 10.8571C10.7314 10.8571 10.6057 10.8171 10.5 10.7314L7.64288 8.44573C7.50859 8.33714 7.4286 8.1743 7.4286 8V3.42858H7.42855Z" fill="#FE6A84"/>
+                            </svg>
+                            <a href="#">6:00 - 22:00</a>                          
+                        </div>
+                    </div>
+                    <div class="header-top-right d-flex">
+                        <div class="order-now">
+                            <button type="button" class="btn btn-pink orderNow" data-toggle="modal" data-target="#orderNow">
+                                Order Now
+                            </button>
+                        </div>
+                        <!-- Cart Btn -->
+                        <button class="navbar-toggler shopping-cart" type="button" cart-total="3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.91868 6.22222V7.77778H4.55912C3.78426 7.77793 3.03759 8.03328 2.46644 8.49345C1.89528 8.95362 1.54112 9.58519 1.47382 10.2636L0.0117073 25.0413C-0.0255779 25.4171 0.0264263 25.7957 0.164421 26.1529C0.302415 26.5101 0.523387 26.8382 0.813319 27.1164C1.10325 27.3946 1.45581 27.6168 1.84863 27.7689C2.24146 27.921 2.66597 27.9997 3.09524 28H24.903C25.3324 27.9999 25.7571 27.9214 26.1501 27.7694C26.5432 27.6173 26.896 27.3952 27.1861 27.117C27.4762 26.8387 27.6973 26.5106 27.8354 26.1532C27.9735 25.7959 28.0256 25.4173 27.9883 25.0413L26.5262 10.2636C26.4589 9.58492 26.1044 8.95313 25.5329 8.49292C24.9614 8.03271 24.2143 7.77754 23.4391 7.77778H21.0796V6.22222C21.0796 4.57199 20.3336 2.98934 19.0057 1.82245C17.6779 0.655554 15.877 0 13.9991 0C12.1213 0 10.3203 0.655554 8.99249 1.82245C7.66465 2.98934 6.91868 4.57199 6.91868 6.22222V6.22222ZM13.9991 2.33333C12.8255 2.33333 11.6999 2.74305 10.87 3.47236C10.0401 4.20167 9.57384 5.19082 9.57384 6.22222V7.77778H18.4244V6.22222C18.4244 5.19082 17.9582 4.20167 17.1283 3.47236C16.2984 2.74305 15.1728 2.33333 13.9991 2.33333ZM9.57384 14C9.57384 15.0314 10.0401 16.0206 10.87 16.7499C11.6999 17.4792 12.8255 17.8889 13.9991 17.8889C15.1728 17.8889 16.2984 17.4792 17.1283 16.7499C17.9582 16.0206 18.4244 15.0314 18.4244 14V12.0556C18.4244 11.7461 18.5643 11.4494 18.8132 11.2306C19.0622 11.0118 19.3999 10.8889 19.752 10.8889C20.1041 10.8889 20.4417 11.0118 20.6907 11.2306C20.9397 11.4494 21.0796 11.7461 21.0796 12.0556V14C21.0796 15.6502 20.3336 17.2329 19.0057 18.3998C17.6779 19.5667 15.877 20.2222 13.9991 20.2222C12.1213 20.2222 10.3203 19.5667 8.99249 18.3998C7.66465 17.2329 6.91868 15.6502 6.91868 14V12.0556C6.91868 11.7461 7.05854 11.4494 7.30751 11.2306C7.55648 11.0118 7.89416 10.8889 8.24626 10.8889C8.59835 10.8889 8.93603 11.0118 9.185 11.2306C9.43397 11.4494 9.57384 11.7461 9.57384 12.0556V14Z" />
+                            </svg>
+                        </button>
+                        <!-- Offcanvas Cart -->
+                        <div class="offcanvas" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas">
+                                    <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 12.3108L2.83193 19.5117C2.18389 20.1628 1.13407 20.1628 0.486029 19.5117C-0.16201 18.8607 -0.16201 17.8061 0.486029 17.1551L7.61057 10.0008L0.487324 2.8449C-0.160715 2.1939 -0.160715 1.13926 0.487324 0.488256C1.13536 -0.162752 2.18519 -0.162752 2.83323 0.488256L10 7.68786L17.1668 0.488256C17.8148 -0.162752 18.8646 -0.162752 19.5127 0.488256C20.1607 1.13926 20.1607 2.1939 19.5127 2.8449L12.3894 10.0008L19.514 17.1551C20.162 17.8061 20.162 18.8607 19.514 19.5117C18.8659 20.1628 17.8161 20.1628 17.1681 19.5117L10 12.3108Z" />
+                                    </svg>                                        
+                                </button>
+                            </div>
+                            <div class="offcanvas-body">
+                              ...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Header Top -->
+        <!-- Header Bottom -->
+        <div class="header-bottom">
+            <div class="container-xl">
+                <nav class="navbar navbar-expand-lg p-0 navbar-light nav-custom justify-content-between">
+                    <a class="navbar-brand" href="#">
+                        <img src="img/logo gốc 1.svg" alt="">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarMain">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Trang chủ <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sản phẩm</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Về chúng tôi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Bài viết</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Liên hệ</a>
+                            </li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0 d-none custom-search">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </div>
+                    <form class="form-inline my-2 my-lg-0 custom-search">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.8045 14.8621L11.8252 10.8828C12.9096 9.5565 13.4428 7.86416 13.3144 6.15581C13.1861 4.44745 12.406 2.85379 11.1356 1.70445C9.86516 0.555106 8.20158 -0.0619731 6.48895 -0.0191518C4.77632 0.0236694 3.14566 0.723114 1.93426 1.93451C0.72287 3.1459 0.0234252 4.77656 -0.019396 6.48919C-0.0622172 8.20183 0.554862 9.8654 1.7042 11.1358C2.85354 12.4062 4.44721 13.1863 6.15556 13.3147C7.86392 13.443 9.55625 12.9098 10.8825 11.8254L14.8619 15.8048C14.9876 15.9262 15.156 15.9934 15.3308 15.9919C15.5056 15.9904 15.6728 15.9203 15.7964 15.7966C15.92 15.673 15.9901 15.5058 15.9916 15.331C15.9932 15.1562 15.926 14.9878 15.8045 14.8621ZM6.66652 12.0001C5.61169 12.0001 4.58054 11.6873 3.70348 11.1013C2.82642 10.5152 2.14283 9.68228 1.73916 8.70774C1.3355 7.7332 1.22988 6.66085 1.43567 5.62628C1.64145 4.59172 2.14941 3.64141 2.89529 2.89553C3.64117 2.14965 4.59147 1.6417 5.62604 1.43591C6.6606 1.23012 7.73296 1.33574 8.7075 1.73941C9.68204 2.14308 10.515 2.82666 11.101 3.70372C11.6871 4.58079 11.9999 5.61193 11.9999 6.66677C11.9983 8.08077 11.4359 9.4364 10.436 10.4362C9.43615 11.4361 8.08052 11.9985 6.66652 12.0001Z" />
+                            </svg>                                
+                        </button>
+                    </form>
+                  </nav>
+            </div>
+        </div>
+        <!-- End Header Bottom -->
+    </header>
+    <!-- End Header Bottom -->
+
+    <!-- Slider -->
+    <div class="slider slick">
+        <div class="slider-item">
+            <img src="img/Property 1=Pink.svg" alt="">
+            <div class="slider-content active">
+                <div class="slider-cake mb-4">Cupcake cherry chocolate</div>
+                <h4 class="slider-title mb-4">Những chiếc bánh ngọt ngào từ Sweet Dreams</h4>
+                <p class="slider-description mb-4">Cupcake cherry chocolate là một loại bánh cupcake siêu ngon tuyệt hảo! Chúng có hương vị giống như những quả anh đào mà chúng ta đều yêu thích nhưng ở dạng bánh cupcake thân thiện với bữa tiệc! Ai có thể chống lại? Lựa chọn hoàn hảo cho Lễ tình nhân hoặc sinh nhật.</p>
+                <a href="#" class="btn btn-outline-pink slider-btn">Đặt hàng ngay</a>
+            </div>
+        </div>
+        <div class="slider-item">
+            <img src="img/Property 1=Blue.svg" alt="">
+            <div class="slider-content">
+                <div class="slider-cake mb-4">Cupcake cherry chocolate</div>
+                <h4 class="slider-title mb-4">Những chiếc bánh ngọt ngào từ Sweet Dreams</h4>
+                <p class="slider-description mb-4">Cupcake cherry chocolate là một loại bánh cupcake siêu ngon tuyệt hảo! Chúng có hương vị giống như những quả anh đào mà chúng ta đều yêu thích nhưng ở dạng bánh cupcake thân thiện với bữa tiệc! Ai có thể chống lại? Lựa chọn hoàn hảo cho Lễ tình nhân hoặc sinh nhật.</p>
+                <a href="#" class="btn btn-outline-pink slider-btn">Đặt hàng ngay</a>
+            </div>
+        </div>
+        <div class="slider-item">
+            <img src="img/Property 1=Green.svg" alt="">
+            <div class="slider-content">
+                <div class="slider-cake mb-4">Cupcake cherry chocolate</div>
+                <h4 class="slider-title mb-4">Những chiếc bánh ngọt ngào từ Sweet Dreams</h4>
+                <p class="slider-description mb-4">Cupcake cherry chocolate là một loại bánh cupcake siêu ngon tuyệt hảo! Chúng có hương vị giống như những quả anh đào mà chúng ta đều yêu thích nhưng ở dạng bánh cupcake thân thiện với bữa tiệc! Ai có thể chống lại? Lựa chọn hoàn hảo cho Lễ tình nhân hoặc sinh nhật.</p>
+                <a href="#" class="btn btn-outline-pink slider-btn">Đặt hàng ngay</a>
+            </div>
+        </div>
+    </div>
+    <!-- End Slider -->
+
+    <!-- Modal Order Now -->
+    <div class="modal fade" id="orderNow" tabindex="-1" aria-labelledby="orderNowLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderNowLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery -->
+    <script src="dist/js/jquery-3.6.4.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="libs/bootstrap-4.6.2-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Slick -->
+    <script src="libs/slick/slick.min.js"></script>
+    <!-- My Script -->
+    <script src="dist/js/script.js"></script>
 </body>
 </html>

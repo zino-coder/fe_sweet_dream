@@ -1,0 +1,88 @@
+.slider {
+    .slider-item {
+        position: relative;
+        img {
+            width: 100%;
+        }
+    }
+
+    .slider-content {
+        width: 60%;
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        color: $color-white;
+        transform: translateY(-50%);
+        opacity: 0;
+        transition: all 1s;
+        &.active {
+            opacity: 1;
+        }
+        .slider-cake {
+            line-height: 24px;
+        }
+        .slider-title {
+            line-height: 32px;
+        }
+        .slider-description {
+            line-height: 24px;
+        }
+        .slider-btn {
+            background-color: #fff;
+            padding: 14px 28px;
+            font-weight: 600;
+            line-height: 18px;
+            border-radius: 24px;
+            &:hover {
+                color: #fff !important;
+                background-color: $main-color;
+            }
+        }
+    }
+    &-dots {
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        list-style: none;
+        display: flex;
+        li {
+            position: relative;
+            margin: 0 2px;
+            width: 11px;
+            height: 11px;
+            &.slick-active {
+                width: 30px;
+                button::after {
+                    width: 30px;
+                }
+            }
+            button {
+                border: none;
+                padding: 0;
+                margin: 0;
+                text-transform: none;
+                cursor: pointer;
+                line-height: 11px;
+                font-size: 0;
+                &::after {
+                    content: '';
+                    background-color: #fff;
+                    position: absolute;
+                    border-radius: 11px;
+                    display: block;
+                    top: 0;
+                    left: 0;
+                    width: 11px;
+                    height: 11px;
+                    content: '';
+                    text-align: center;
+                    opacity: 1;
+                    z-index: 888;
+                }
+            }
+        }
+    }
+}
