@@ -43,7 +43,7 @@
         padding: 0;
         margin: 0;
         position: absolute;
-        bottom: 20px;
+        bottom: 25px;
         left: 50%;
         transform: translateX(-50%);
         list-style: none;
@@ -88,13 +88,17 @@
 }
 // Trending product 
 .trending-proudct {
-    padding-top: 30px;
+    padding-top: 25px;
     .card {
         transition: all .3s;
         border-radius: 30px;
         overflow: hidden;
         margin-bottom: 30px;
         border: 1px solid $main-color;
+        &-body {
+            padding-top: 14px;
+            padding-bottom: 10px;
+        }
         .product-img {
             position: relative;
             .image-overlay {
@@ -123,6 +127,7 @@
     }
     .card-title {
         line-height: 28px;
+        margin-bottom: 22px;
     }
     .card-text {
         color: $color-grey;
@@ -130,6 +135,7 @@
         line-height: 30px;
         font-weight: 500;
         margin-bottom: 11px;
+        margin-bottom: 9px;
         .sale-price {
             font-size: 20px;
             color: $main-hover-color;
@@ -173,7 +179,7 @@
 
 .testimonial {
     padding-top: 97px;
-    padding-bottom: 60px;
+    padding-bottom: 70px;
     .logo-circle {
         padding: 10%;
         width: 100%;
@@ -301,11 +307,10 @@
     }
     padding-top: 60px;
     .card {
-        padding-top: 6px;
         border-radius: 20px;
     }
     .content {
-        padding: 15px;
+        padding: 10px 13px 15px;
         &-title {
             font-weight: 600;
         }
@@ -315,4 +320,5 @@
             font-weight: 400;
         }
     }
+    padding-bottom: 116px;
 }

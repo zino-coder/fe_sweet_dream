@@ -9,7 +9,7 @@
             transition: all .5s;
                 margin-right: 32px;
                 a {
-                    margin-left: 8px;
+                    margin-left: 4px;
                     font-size: $font-size-header;
                     line-height: 18px;
                     font-weight: 600;
@@ -107,6 +107,23 @@
             }
             #navbarMain {
                 flex-grow: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .header-bottom {
+        .nav-custom {
+            .navbar-nav {
+                margin-top: -8px;
+                margin-left: -15px;
+            }
+            &>.custom-search {
+                padding-bottom: 10px;
+                button {
+                    top: 42%;
+                }
             }
         }
     }

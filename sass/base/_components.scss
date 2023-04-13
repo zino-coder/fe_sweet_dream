@@ -133,3 +133,12 @@ h2.web-title {
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: auto;
+    box-sizing: border-box;
+}
