@@ -95,8 +95,10 @@ ul li {
 }
 
 .offcanvas {
+  overflow-x: hidden;
   position: fixed;
-  min-width: 355px;
+  width: 80%;
+  max-width: 455px;
   height: 100%;
   padding: 18px 28px 33px;
   background: #fff;
@@ -215,6 +217,39 @@ h2.web-title {
   box-sizing: border-box;
 }
 
+.orderNow-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -6px;
+}
+
+.custom-radio {
+  height: 24px;
+  width: 24px;
+  border: 1.5px solid #FE6A84;
+  border-radius: 50%;
+  appearance: unset;
+  vertical-align: bottom;
+  position: relative;
+}
+.custom-radio::after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #FE6A84;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+.custom-radio:checked::after {
+  visibility: visible;
+}
+
 .header-top {
   height: 40px;
   display: flex;
@@ -268,6 +303,79 @@ h2.web-title {
   font-weight: 600;
   box-sizing: content-box;
 }
+.header-top-right #cartOffcanvas {
+  display: flex;
+  flex-direction: column;
+}
+.header-top-right #cartOffcanvas .offcanvas-body {
+  flex: 1;
+  display: flex;
+  overflow: auto;
+  flex-direction: column;
+}
+.header-top-right #cartOffcanvas .cart-list {
+  flex: 1;
+  pointer-events: auto;
+  overflow-y: scroll;
+  /* Handle */
+  /* width */
+}
+.header-top-right #cartOffcanvas .cart-list::-webkit-scrollbar-thumb {
+  background: #FE6A84;
+  border-radius: 5px;
+}
+.header-top-right #cartOffcanvas .cart-list::-webkit-scrollbar-thumb:hover {
+  background-color: #F35D78;
+}
+.header-top-right #cartOffcanvas .cart-list::-webkit-scrollbar {
+  width: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.header-top-right #cartOffcanvas .cart-item {
+  transition: all 0.3s;
+  border-bottom: 1px solid #FE6A84;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  height: 120px;
+  position: relative;
+}
+.header-top-right #cartOffcanvas .cart-item .item-img {
+  height: 100%;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  border: 1px solid #FE6A84;
+  border-radius: 10px;
+}
+.header-top-right #cartOffcanvas .cart-item .item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.header-top-right #cartOffcanvas .cart-item .item-info {
+  padding-left: 20px;
+  flex: 1;
+}
+.header-top-right #cartOffcanvas .cart-item .item-close {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.header-top-right #cartOffcanvas .cart-item:hover .item-info .item-title a {
+  color: #FE6A84;
+}
+.header-top-right #cartOffcanvas .cart-total {
+  font-weight: 700;
+  color: #FE6A84;
+  font-size: 20px;
+}
+.header-top-right #cartOffcanvas .cart-btn {
+  border-radius: 19px;
+}
 .header-bottom {
   height: 70px;
   display: flex;
@@ -314,6 +422,57 @@ h2.web-title {
   flex-grow: 0;
 }
 
+#orderNow .modal-content {
+  background-color: #f1e2e5;
+}
+#orderNow .orderNote {
+  color: #E42D3C;
+  font-weight: 400;
+  line-height: 24px;
+}
+#orderNow .modal-header #orderNowLabel {
+  font-size: 24px;
+  line-height: 32px;
+  color: #FE6A84;
+  font-weight: 700;
+}
+#orderNow .col-padding-custom {
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-bottom: 12px;
+}
+#orderNow .col-padding-custom input[type=text] {
+  height: 40px;
+  font-size: 16px;
+  border-radius: 40px;
+}
+#orderNow .col-padding-custom textarea {
+  height: 60px;
+  border-radius: 30px;
+  resize: unset;
+  appearance: unset;
+}
+#orderNow .col-padding-custom textarea::-webkit-scrollbar {
+  visibility: hidden;
+}
+#orderNow .col-padding-custom select {
+  height: 40px;
+  border-radius: 40px;
+  padding: 6px 17px;
+  appearance: unset;
+  background-image: url("../../img/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 17px), center;
+}
+#orderNow .orderNowSubmit {
+  flex: 1;
+  height: 48px;
+  font-size: 20px;
+  line-height: 24px;
+  border-radius: 24px;
+  font-weight: 700;
+}
+
 @media (min-width: 992px) {
   .header-bottom .nav-custom .navbar-nav {
     margin-top: -8px;
@@ -329,6 +488,8 @@ h2.web-title {
 footer {
   padding-top: 123px;
   background-image: url("../../img/footer.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
   font-size: 14px;
   color: #fff;
 }

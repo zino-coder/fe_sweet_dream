@@ -53,15 +53,15 @@
                             </button>
                         </div>
                         <!-- Cart Btn -->
-                        <button class="navbar-toggler shopping-cart" type="button" cart-total="3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+                        <button class="navbar-toggler shopping-cart" type="button" cart-total="3" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
                             <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.91868 6.22222V7.77778H4.55912C3.78426 7.77793 3.03759 8.03328 2.46644 8.49345C1.89528 8.95362 1.54112 9.58519 1.47382 10.2636L0.0117073 25.0413C-0.0255779 25.4171 0.0264263 25.7957 0.164421 26.1529C0.302415 26.5101 0.523387 26.8382 0.813319 27.1164C1.10325 27.3946 1.45581 27.6168 1.84863 27.7689C2.24146 27.921 2.66597 27.9997 3.09524 28H24.903C25.3324 27.9999 25.7571 27.9214 26.1501 27.7694C26.5432 27.6173 26.896 27.3952 27.1861 27.117C27.4762 26.8387 27.6973 26.5106 27.8354 26.1532C27.9735 25.7959 28.0256 25.4173 27.9883 25.0413L26.5262 10.2636C26.4589 9.58492 26.1044 8.95313 25.5329 8.49292C24.9614 8.03271 24.2143 7.77754 23.4391 7.77778H21.0796V6.22222C21.0796 4.57199 20.3336 2.98934 19.0057 1.82245C17.6779 0.655554 15.877 0 13.9991 0C12.1213 0 10.3203 0.655554 8.99249 1.82245C7.66465 2.98934 6.91868 4.57199 6.91868 6.22222V6.22222ZM13.9991 2.33333C12.8255 2.33333 11.6999 2.74305 10.87 3.47236C10.0401 4.20167 9.57384 5.19082 9.57384 6.22222V7.77778H18.4244V6.22222C18.4244 5.19082 17.9582 4.20167 17.1283 3.47236C16.2984 2.74305 15.1728 2.33333 13.9991 2.33333ZM9.57384 14C9.57384 15.0314 10.0401 16.0206 10.87 16.7499C11.6999 17.4792 12.8255 17.8889 13.9991 17.8889C15.1728 17.8889 16.2984 17.4792 17.1283 16.7499C17.9582 16.0206 18.4244 15.0314 18.4244 14V12.0556C18.4244 11.7461 18.5643 11.4494 18.8132 11.2306C19.0622 11.0118 19.3999 10.8889 19.752 10.8889C20.1041 10.8889 20.4417 11.0118 20.6907 11.2306C20.9397 11.4494 21.0796 11.7461 21.0796 12.0556V14C21.0796 15.6502 20.3336 17.2329 19.0057 18.3998C17.6779 19.5667 15.877 20.2222 13.9991 20.2222C12.1213 20.2222 10.3203 19.5667 8.99249 18.3998C7.66465 17.2329 6.91868 15.6502 6.91868 14V12.0556C6.91868 11.7461 7.05854 11.4494 7.30751 11.2306C7.55648 11.0118 7.89416 10.8889 8.24626 10.8889C8.59835 10.8889 8.93603 11.0118 9.185 11.2306C9.43397 11.4494 9.57384 11.7461 9.57384 12.0556V14Z" />
                             </svg>
                         </button>
                         <!-- Offcanvas Cart -->
-                        <div class="offcanvas" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                            <div class="offcanvas-header">
-                                <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+                        <div class="offcanvas" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+                            <div class="offcanvas-header mb-5">
+                                <h5 id="cartOffcanvasLabel">Giỏ hàng</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas">
                                     <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10 12.3108L2.83193 19.5117C2.18389 20.1628 1.13407 20.1628 0.486029 19.5117C-0.16201 18.8607 -0.16201 17.8061 0.486029 17.1551L7.61057 10.0008L0.487324 2.8449C-0.160715 2.1939 -0.160715 1.13926 0.487324 0.488256C1.13536 -0.162752 2.18519 -0.162752 2.83323 0.488256L10 7.68786L17.1668 0.488256C17.8148 -0.162752 18.8646 -0.162752 19.5127 0.488256C20.1607 1.13926 20.1607 2.1939 19.5127 2.8449L12.3894 10.0008L19.514 17.1551C20.162 17.8061 20.162 18.8607 19.514 19.5117C18.8659 20.1628 17.8161 20.1628 17.1681 19.5117L10 12.3108Z" />
@@ -69,7 +69,163 @@
                                 </button>
                             </div>
                             <div class="offcanvas-body">
-                              ...
+                                <ul class="cart-list">
+                                    <li class="cart-item d-flex">
+                                        <div class="item-img">
+                                            <img src="img/cake-p1-2.png" alt="">
+                                        </div>
+                                        <div class="item-info">
+                                            <h5 class="item-title">
+                                                <a href="#">Tên sản phẩm</a>
+                                            </h5>
+                                            <div class="price">
+                                                <span class="amout">2</span>
+                                                x
+                                                <span class="price">$2.000</span>
+                                            </div>
+                                        </div>
+                                        <div class="item-close">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="12" cy="12" r="11.5" stroke="#FE6A84"/>
+                                                <path d="M16.2349 14.9645C16.5865 15.316 16.5865 15.8855 16.2349 16.2371C16.0606 16.4128 15.83 16.5 15.5994 16.5C15.3688 16.5 15.1387 16.4121 14.9632 16.2363L11.9996 13.2743L9.03635 16.2356C8.86058 16.4128 8.63026 16.5 8.39993 16.5C8.1696 16.5 7.93956 16.4128 7.76365 16.2356C7.41212 15.8841 7.41212 15.3146 7.76365 14.9631L10.7278 11.9989L7.76365 9.03621C7.41212 8.68467 7.41212 8.11519 7.76365 7.76365C8.11519 7.41212 8.68467 7.41212 9.03621 7.76365L11.9996 10.7292L14.9638 7.76506C15.3153 7.41352 15.8848 7.41352 16.2363 7.76506C16.5879 8.11659 16.5879 8.68608 16.2363 9.03761L13.2722 12.0018L16.2349 14.9645Z" fill="#fff"/>
+                                                </svg>                                                
+                                        </div>
+                                    </li>
+                                    <li class="cart-item d-flex">
+                                        <div class="item-img">
+                                            <img src="img/cake-p1-2.png" alt="">
+                                        </div>
+                                        <div class="item-info">
+                                            <h5 class="item-title">
+                                                <a href="#">Tên sản phẩm</a>
+                                            </h5>
+                                            <div class="price">
+                                                <span class="amout">2</span>
+                                                x
+                                                <span class="price">$2.000</span>
+                                            </div>
+                                        </div>
+                                        <div class="item-close">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="12" cy="12" r="11.5" stroke="#FE6A84"/>
+                                                <path d="M16.2349 14.9645C16.5865 15.316 16.5865 15.8855 16.2349 16.2371C16.0606 16.4128 15.83 16.5 15.5994 16.5C15.3688 16.5 15.1387 16.4121 14.9632 16.2363L11.9996 13.2743L9.03635 16.2356C8.86058 16.4128 8.63026 16.5 8.39993 16.5C8.1696 16.5 7.93956 16.4128 7.76365 16.2356C7.41212 15.8841 7.41212 15.3146 7.76365 14.9631L10.7278 11.9989L7.76365 9.03621C7.41212 8.68467 7.41212 8.11519 7.76365 7.76365C8.11519 7.41212 8.68467 7.41212 9.03621 7.76365L11.9996 10.7292L14.9638 7.76506C15.3153 7.41352 15.8848 7.41352 16.2363 7.76506C16.5879 8.11659 16.5879 8.68608 16.2363 9.03761L13.2722 12.0018L16.2349 14.9645Z" fill="#fff"/>
+                                                </svg>                                                
+                                        </div>
+                                    </li>
+                                    <li class="cart-item d-flex">
+                                        <div class="item-img">
+                                            <img src="img/cake-p1-2.png" alt="">
+                                        </div>
+                                        <div class="item-info">
+                                            <h5 class="item-title">
+                                                <a href="#">Tên sản phẩm</a>
+                                            </h5>
+                                            <div class="price">
+                                                <span class="amout">2</span>
+                                                x
+                                                <span class="price">$2.000</span>
+                                            </div>
+                                        </div>
+                                        <div class="item-close">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="12" cy="12" r="11.5" stroke="#FE6A84"/>
+                                                <path d="M16.2349 14.9645C16.5865 15.316 16.5865 15.8855 16.2349 16.2371C16.0606 16.4128 15.83 16.5 15.5994 16.5C15.3688 16.5 15.1387 16.4121 14.9632 16.2363L11.9996 13.2743L9.03635 16.2356C8.86058 16.4128 8.63026 16.5 8.39993 16.5C8.1696 16.5 7.93956 16.4128 7.76365 16.2356C7.41212 15.8841 7.41212 15.3146 7.76365 14.9631L10.7278 11.9989L7.76365 9.03621C7.41212 8.68467 7.41212 8.11519 7.76365 7.76365C8.11519 7.41212 8.68467 7.41212 9.03621 7.76365L11.9996 10.7292L14.9638 7.76506C15.3153 7.41352 15.8848 7.41352 16.2363 7.76506C16.5879 8.11659 16.5879 8.68608 16.2363 9.03761L13.2722 12.0018L16.2349 14.9645Z" fill="#fff"/>
+                                                </svg>                                                
+                                        </div>
+                                    </li>
+                                    <li class="cart-item d-flex">
+                                        <div class="item-img">
+                                            <img src="img/cake-p1-2.png" alt="">
+                                        </div>
+                                        <div class="item-info">
+                                            <h5 class="item-title">
+                                                <a href="#">Tên sản phẩm</a>
+                                            </h5>
+                                            <div class="price">
+                                                <span class="amout">2</span>
+                                                x
+                                                <span class="price">$2.000</span>
+                                            </div>
+                                        </div>
+                                        <div class="item-close">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="12" cy="12" r="11.5" stroke="#FE6A84"/>
+                                                <path d="M16.2349 14.9645C16.5865 15.316 16.5865 15.8855 16.2349 16.2371C16.0606 16.4128 15.83 16.5 15.5994 16.5C15.3688 16.5 15.1387 16.4121 14.9632 16.2363L11.9996 13.2743L9.03635 16.2356C8.86058 16.4128 8.63026 16.5 8.39993 16.5C8.1696 16.5 7.93956 16.4128 7.76365 16.2356C7.41212 15.8841 7.41212 15.3146 7.76365 14.9631L10.7278 11.9989L7.76365 9.03621C7.41212 8.68467 7.41212 8.11519 7.76365 7.76365C8.11519 7.41212 8.68467 7.41212 9.03621 7.76365L11.9996 10.7292L14.9638 7.76506C15.3153 7.41352 15.8848 7.41352 16.2363 7.76506C16.5879 8.11659 16.5879 8.68608 16.2363 9.03761L13.2722 12.0018L16.2349 14.9645Z" fill="#fff"/>
+                                                </svg>                                                
+                                        </div>
+                                    </li>
+                                    <li class="cart-item d-flex">
+                                        <div class="item-img">
+                                            <img src="img/cake-p1-2.png" alt="">
+                                        </div>
+                                        <div class="item-info">
+                                            <h5 class="item-title">
+                                                <a href="#">Tên sản phẩm</a>
+                                            </h5>
+                                            <div class="price">
+                                                <span class="amout">2</span>
+                                                x
+                                                <span class="price">$2.000</span>
+                                            </div>
+                                        </div>
+                                        <div class="item-close">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="12" cy="12" r="11.5" stroke="#FE6A84"/>
+                                                <path d="M16.2349 14.9645C16.5865 15.316 16.5865 15.8855 16.2349 16.2371C16.0606 16.4128 15.83 16.5 15.5994 16.5C15.3688 16.5 15.1387 16.4121 14.9632 16.2363L11.9996 13.2743L9.03635 16.2356C8.86058 16.4128 8.63026 16.5 8.39993 16.5C8.1696 16.5 7.93956 16.4128 7.76365 16.2356C7.41212 15.8841 7.41212 15.3146 7.76365 14.9631L10.7278 11.9989L7.76365 9.03621C7.41212 8.68467 7.41212 8.11519 7.76365 7.76365C8.11519 7.41212 8.68467 7.41212 9.03621 7.76365L11.9996 10.7292L14.9638 7.76506C15.3153 7.41352 15.8848 7.41352 16.2363 7.76506C16.5879 8.11659 16.5879 8.68608 16.2363 9.03761L13.2722 12.0018L16.2349 14.9645Z" fill="#fff"/>
+                                                </svg>                                                
+                                        </div>
+                                    </li>
+                                    <li class="cart-item d-flex">
+                                        <div class="item-img">
+                                            <img src="img/cake-p1-2.png" alt="">
+                                        </div>
+                                        <div class="item-info">
+                                            <h5 class="item-title">
+                                                <a href="#">Tên sản phẩm</a>
+                                            </h5>
+                                            <div class="price">
+                                                <span class="amout">2</span>
+                                                x
+                                                <span class="price">$2.000</span>
+                                            </div>
+                                        </div>
+                                        <div class="item-close">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="12" cy="12" r="11.5" stroke="#FE6A84"/>
+                                                <path d="M16.2349 14.9645C16.5865 15.316 16.5865 15.8855 16.2349 16.2371C16.0606 16.4128 15.83 16.5 15.5994 16.5C15.3688 16.5 15.1387 16.4121 14.9632 16.2363L11.9996 13.2743L9.03635 16.2356C8.86058 16.4128 8.63026 16.5 8.39993 16.5C8.1696 16.5 7.93956 16.4128 7.76365 16.2356C7.41212 15.8841 7.41212 15.3146 7.76365 14.9631L10.7278 11.9989L7.76365 9.03621C7.41212 8.68467 7.41212 8.11519 7.76365 7.76365C8.11519 7.41212 8.68467 7.41212 9.03621 7.76365L11.9996 10.7292L14.9638 7.76506C15.3153 7.41352 15.8848 7.41352 16.2363 7.76506C16.5879 8.11659 16.5879 8.68608 16.2363 9.03761L13.2722 12.0018L16.2349 14.9645Z" fill="#fff"/>
+                                                </svg>                                                
+                                        </div>
+                                    </li>
+                                    <li class="cart-item d-flex">
+                                        <div class="item-img">
+                                            <img src="img/cake-p1-2.png" alt="">
+                                        </div>
+                                        <div class="item-info">
+                                            <h5 class="item-title">
+                                                <a href="#">Tên sản phẩm</a>
+                                            </h5>
+                                            <div class="price">
+                                                <span class="amout">2</span>
+                                                x
+                                                <span class="price">$2.000</span>
+                                            </div>
+                                        </div>
+                                        <div class="item-close">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="12" cy="12" r="11.5" stroke="#FE6A84"/>
+                                                <path d="M16.2349 14.9645C16.5865 15.316 16.5865 15.8855 16.2349 16.2371C16.0606 16.4128 15.83 16.5 15.5994 16.5C15.3688 16.5 15.1387 16.4121 14.9632 16.2363L11.9996 13.2743L9.03635 16.2356C8.86058 16.4128 8.63026 16.5 8.39993 16.5C8.1696 16.5 7.93956 16.4128 7.76365 16.2356C7.41212 15.8841 7.41212 15.3146 7.76365 14.9631L10.7278 11.9989L7.76365 9.03621C7.41212 8.68467 7.41212 8.11519 7.76365 7.76365C8.11519 7.41212 8.68467 7.41212 9.03621 7.76365L11.9996 10.7292L14.9638 7.76506C15.3153 7.41352 15.8848 7.41352 16.2363 7.76506C16.5879 8.11659 16.5879 8.68608 16.2363 9.03761L13.2722 12.0018L16.2349 14.9645Z" fill="#fff"/>
+                                                </svg>                                                
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="total d-flex justify-content-between mb-4 pt-3">
+                                    <h5>Tổng tiền:</h5> 
+                                    <div class="cart-total">$12.000</div>
+                                </div>
+                                <div class="d-flex justify-content-between flex-wrap">
+                                    <a href="#" class="btn btn-pink flex-fill w-100 mb-4 cart-btn" id="gotocart">Giỏ hàng</a>
+                                    <a href="#" class="btn btn-outline-pink flex-fill w-100 cart-btn" id="checkout">Thanh Toán</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -813,17 +969,68 @@
     <div class="modal fade" id="orderNow" tabindex="-1" aria-labelledby="orderNowLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="orderNowLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                <div class="modal-header justify-content-center">
+                    <h5 class="modal-title" id="orderNowLabel">Thông tin liên hệ</h5>
                 </div>
                 <div class="modal-body">
-                Chức năng đang trong quá trình phát triển!
+                    <p class="orderNote">
+                        Chúng tôi sẽ liên lạc lại với bạn sau 5 - 10 phút <br />
+                        *Liên hệ: 18001296
+                    </p>
+                    <div class="orderNow-row">
+                        <div class="col-md-6 col-padding-custom">
+                            <input type="text" class="form-control" id="orderName">
+                        </div>
+                        <div class="col-md-6 col-padding-custom">
+                            <input type="text" class="form-control" id="orderPhone">
+                        </div>
+                        <div class="col-md-6 col-padding-custom">
+                            <input type="text" class="form-control" id="orderType">
+                        </div>
+                        <div class="col-md-6 col-padding-custom">
+                            <input type="text" class="form-control" id="orderCount">
+                        </div>
+                        <div class="col-md-12 col-padding-custom">
+                            <div class="form-group m-0">
+                                <textarea class="form-control" id="customerNote" rows="2" placeholder="Lời nhắn"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-padding-custom">
+                            <div class="form-check">
+                                <input class="custom-radio" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                <label class="form-check-label" for="exampleRadios1">
+                                    Nhận tại cửa hàng
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-padding-custom">
+                            <div class="form-group m-0 px-5">
+                                <select class="form-control" id="select_store">
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                  <option>5</option>
+                                </select>
+                              </div>
+                        </div>
+                        <div class="col-md-12 col-padding-custom">
+                            <div class="form-check">
+                                <input class="custom-radio" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                                <label class="form-check-label" for="exampleRadios1">
+                                    Nhận tại nhà
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-padding-custom">
+                            <div class="form-group m-0 px-5">
+                                <input type="text" class="form-control" id="orderCount">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-pink">Save changes</button>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-pink orderNowSubmit">Đặt hàng ngay</button>
                 </div>
             </div>
         </div>

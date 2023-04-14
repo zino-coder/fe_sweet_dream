@@ -3,17 +3,20 @@ $(document).ready(function () {
         const offcanvas = $(this).attr('data-bs-target')
         $('.offcanvas-overlay').addClass('active')
         $(offcanvas).addClass('active')
+        $('body').addClass('modal-open')
     })
 
     $('.offcanvas-overlay').click(function () {
         $('.offcanvas').removeClass('active')
         $(this).removeClass('active')
+        $('body').removeClass('modal-open')
     })
 
     $('.btn-close').click(function () {
         const data = '.' + $(this).attr('data-bs-dismiss');
         $(data).removeClass('active')
-        $('.offcanvas-overlay').addClass('active')
+        $('.offcanvas-overlay').removeClass('active')
+        $('body').removeClass('modal-open')
     })
 
     $('.slick').slick({

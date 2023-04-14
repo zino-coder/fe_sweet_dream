@@ -13,8 +13,10 @@
 }
 
 .offcanvas {
+    overflow-x: hidden;
     position: fixed;
-    min-width: 355px;
+    width: 80%;
+    max-width: 455px;
     height: 100%;
     padding: 18px 28px 33px;
     background: #fff;
@@ -134,11 +136,43 @@ h2.web-title {
     overflow: hidden;
 }
 
-
 .container {
     width: 100%;
     max-width: 1170px;
     padding: 0 15px;
     margin: auto;
     box-sizing: border-box;
+}
+
+.orderNow-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -6px;
+}
+
+.custom-radio {
+    height: 24px;
+    width: 24px;
+    border: 1.5px solid $main-color;
+    border-radius: 50%;
+    appearance: unset;
+    vertical-align: bottom;
+    position: relative;
+    &::after {
+        content: '';
+        display: block;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background-color: $main-color;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: 0;
+        transform: translate(-50%, -50%);
+        visibility: hidden;
+    }
+    &:checked::after {
+        visibility: visible;
+    }
 }

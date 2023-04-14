@@ -4,6 +4,8 @@ footer {
     }
     padding-top: 123px;
     background-image: url('../../img/footer.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
     font-size: $font-size-header;
     color: $color-white;
     a {
