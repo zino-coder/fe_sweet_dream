@@ -1,0 +1,23 @@
+$font-family-main: 'Quicksand';
+$font-size-header: 14px;
+$font-size-content: 16px;
+$font-size-title-small: 20px;
+$font-size-title: 24px;
+$font-size-title-large: 40px;
+$main-color: #FE6A84;
+$main-hover-color: #F35D78;
+$main-content-color: #5A5A5A;
+$color-grey: #858484;
+$color-white: #fff;
+
+@keyframes pulse {
+    0% {
+      transform: scale(1); /* Kích thước ban đầu */
+    }
+    50% {
+      transform: scale(1.1); /* Kích thước phóng to */
+    }
+    100% {
+      transform: scale(1); /* Kích thước ban đầu */
+    }
+}

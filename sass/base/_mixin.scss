@@ -1,0 +1,16 @@
+@mixin btn-pink ($main-color: $main-color) {
+    color: #fff;
+    background-color: $main-color;
+    border-color: $main-color;
+}
+
+@mixin btn-pink-hover ($color: $main-hover-color) {
+    color: #fff;
+    background-color: $color;
+    border-color: $color;
+}
+
+@mixin btn-ouline-pink ($color: $main-color) {
+    color: $color;
+    border-color: $color;
+}
