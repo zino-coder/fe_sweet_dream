@@ -705,7 +705,7 @@ footer .ft-margin {
 
 .testimonial {
   padding-top: 97px;
-  padding-bottom: 70px;
+  padding-bottom: 60px;
 }
 .testimonial .logo-circle {
   padding: 10%;
@@ -719,49 +719,22 @@ footer .ft-margin {
 .testimonial .logo-circle .testi-item {
   transition: all 1s;
 }
-.testimonial .logo-circle .pos-1 {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-.testimonial .logo-circle .pos-2 {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-.testimonial .logo-circle .pos-3 {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-.testimonial .logo-circle .pos-4 {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-.testimonial .logo-circle .pos-5 {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translate(50%, -50%);
-}
-.testimonial .logo-circle .pos-6 {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
 .testimonial .logo-circle .preMoveLeft {
   left: -200px;
 }
 .testimonial .logo-circle .preMoveRight {
   right: -200px;
 }
+.testimonial-content {
+  padding-top: 112px;
+  padding-bottom: 123px;
+  position: relative;
+}
 .testimonial .testi-item {
-  padding: 12px;
-  width: 41.2%;
   text-align: center;
-  box-sizing: content-box;
+}
+.testimonial .testi-item .item-inside {
+  padding: 11px;
 }
 .testimonial .testi-item .content {
   margin: 0;
@@ -769,6 +742,44 @@ footer .ft-margin {
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
+}
+
+.pos-1 {
+  position: absolute;
+  left: 16.6667%;
+  top: 0;
+}
+
+.pos-2 {
+  position: absolute;
+  left: 8.3333%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.pos-3 {
+  position: absolute;
+  left: 16.6667%;
+  bottom: 0;
+}
+
+.pos-4 {
+  position: absolute;
+  right: 16.6667%;
+  top: 0;
+}
+
+.pos-5 {
+  position: absolute;
+  top: 50%;
+  right: 8.3333%;
+  transform: translate(0, -50%);
+}
+
+.pos-6 {
+  position: absolute;
+  right: 16.6667%;
+  bottom: 0;
 }
 
 .orderNowDetail {
